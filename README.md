@@ -161,19 +161,6 @@ Raw data was pre-processed using **SQL Server** to ensure logic resides in the b
 *   **Window Functions (`LAG`):** Used to detect "Spiraling" behavior by comparing current status to the previous month.
 *   **Ranking (`DENSE_RANK`):** Used to categorize top offenders within their specific sectors.
 *   **CTEs:** Used to clean nulls and structure the logic modularly.
-```sql
-/* SQL Snippet: Window Function for Behavioral Analysis */
-WITH Behavior_Metrics AS (
-    SELECT 
-        ct.Case_ID,
-        ct.Is_Default_Flag,
-        -- Check if the PREVIOUS month was also a default.
-        LAG(ct.Is_Default_Flag, 1, 0) OVER (
-            PARTITION BY ct.Case_ID 
-            ORDER BY ct.Due_Date
-        ) AS Previous_Month_Status
-    FROM Clean_Transactions ct
-)
 
 ---
 
