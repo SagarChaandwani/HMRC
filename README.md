@@ -71,7 +71,7 @@ The solution is architected around a specific operational workflow: **Detect (Pa
 ### 1️⃣ Page 1: The Command Center (The Cockpit)
 *Designed for Senior Risk Officers, this view eliminates noise and focuses strictly on "Exception-Based Reporting."*
 
-![Main Dashboard Screenshot](dashboard_previews/1. Command_Center.png)
+![Main Dashboard Screenshot](dashboard_previews/1.Command_Center.png)
 
 #### **A. The Heads-Up Display (Strategic KPIs)**
 Top-level metrics provide an immediate health check of the £1M portfolio using "Glassmorphism" cards to separate high-level data from detailed analytics.
