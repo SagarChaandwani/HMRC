@@ -51,7 +51,7 @@ This solution functions as a **"Single Pane of Glass"** architecture, creating a
 ## 3. Data Structure (Star Schema)
 To ensure high performance and accurate filtering, the data model was architected as a robust **Star Schema**.
 
-![Data Model Screenshot](INSERT_MODEL_IMAGE_LINK_HERE)
+![Data Model Screenshot](dashboard_previews/3.Model_View.png)
 
 *   **Fact Table:** `Fact_Installments`
     *   Granular transaction logs (Due Date, Amount Paid, Payment Method).
