@@ -98,7 +98,7 @@ This table is the engine of the dashboard. It moves beyond standard reporting by
 ### 2️⃣ Page 2: The Case File (Forensic Drill-Through)
 *This is a hidden page, accessible only via a specific user action. It acts as the "Digital Dossier" for a specific company.*
 
-![Drill Through Screenshot](INSERT_DRILLTHROUGH_IMAGE_LINK_HERE)
+![Drill Through Screenshot](dashboard_previews/2.Case_File.png)
 
 #### **The Drill-Through Workflow**
 To access this page, the user must:
