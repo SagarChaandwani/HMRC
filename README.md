@@ -8,11 +8,16 @@
 
 ---
 
-## 📋 Mission Directive
-In the high-volume environment of UK Tax Collection, resources are finite. HMRC cannot investigate every missed payment manually. The objective of this project was to move from **Passive Reporting** (static Excel sheets) to **Active Intelligence** (an operational application).
+## 🧭 Mission Directive
 
-The goal: **Maximize the Recovery Rate** by identifying "Spiraling Debt" patterns early and directing enforcement officers to high-value, high-risk targets.
+### 🎯 The Goal
+To engineer a **"Single Pane of Glass" Enforcement System** that moves Debt Management from **Passive Reporting** (static Excel sheets) to **Active Intelligence**. The objective is to maximize the **Recovery Rate** by identifying "Spiraling Debt" patterns early and directing enforcement officers to high-value, high-risk targets.
 
+### 📉 The Challenge
+In the high-volume environment of UK Tax Collection, resources are finite. HMRC cannot investigate every missed payment manually. The department faced a "Blind Spot" crisis:
+1.  **Inefficient Triage:** Officers wasted hours analyzing low-value cases instead of focusing on habitual defaulters.
+2.  **Sector Blindness:** Inability to visualize which industries (e.g., Construction) were driving the bulk of the £1M debt pile.
+3.  **Slow Reaction Time:** Detecting "Spiraling Debt" (consecutive missed payments) often took months using legacy tools.
 ---
 
 ## 📑 Table of Contents
@@ -20,20 +25,23 @@ The goal: **Maximize the Recovery Rate** by identifying "Spiraling Debt" pattern
 2.  [Key Business Questions Solved](#2-key-business-questions-solved)
 3.  [Data Structure (Star Schema)](#3-data-structure-star-schema)
 4.  [Dashboard Deep Dive](#4-dashboard-deep-dive)
-5.  [Strategic Recommendations](#5-strategic-recommendations)
-6.  [Assumptions & Future Scope](#6-assumptions--future-scope)
-7.  [Technical Implementation](#7-technical-implementation)
-8.  [Data Dictionary](#8-data-dictionary)
+5.  [UI/UX Design Philosophy](#-uiux-design-philosophy)
+6.  [Strategic Recommendations](#5-strategic-recommendations)
+7.  [Assumptions & Future Scope](#6-assumptions--future-scope)
+8.  [Technical Implementation](#7-technical-implementation)
+9.  [Data Dictionary](#8-data-dictionary)
 
 ---
 
-## 1. Executive Summary & Impact
-This solution functions as a **"Single Pane of Glass"** architecture, creating an automated risk segmentation engine for the Debt Management team.
+## 🏆 Executive Summary & Quantified Impact
+
+This solution functions as an automated risk segmentation engine, transforming raw ledger data into a strategic enforcement tool.
 
 **Quantified Impact:**
-*   **Portfolio Oversight:** Monitors a total active debt exposure of **£1M+**.
-*   **Risk Identification:** Automatically flagged **23 "High Risk" habitual defaulters** using complex behavioral logic.
+*   **Portfolio Oversight:** Monitors a total active debt exposure of **£1M+**, providing real-time liquidity tracking across multiple regions.
+*   **Risk Identification:** Automatically flagged **23 "High Risk" Habitual Defaulters** using complex behavioral logic, creating an immediate "Hit List" for legal action.
 *   **Operational Efficiency:** Reduced case investigation time from **hours to seconds** via a forensic 3-click drill-through workflow.
+*   **Collection Performance:** Tracks a current **Recovery Rate of 65%**, highlighting a significant gap against the 85% departmental target and pinpointing underperforming sectors (specifically Construction).
 
 ---
 
@@ -153,7 +161,19 @@ Raw data was pre-processed using **SQL Server** to ensure logic resides in the b
 *   **Window Functions (`LAG`):** Used to detect "Spiraling" behavior by comparing current status to the previous month.
 *   **Ranking (`DENSE_RANK`):** Used to categorize top offenders within their specific sectors.
 *   **CTEs:** Used to clean nulls and structure the logic modularly.
-
+```sql
+/* SQL Snippet: Window Function for Behavioral Analysis */
+WITH Behavior_Metrics AS (
+    SELECT 
+        ct.Case_ID,
+        ct.Is_Default_Flag,
+        -- Check if the PREVIOUS month was also a default.
+        LAG(ct.Is_Default_Flag, 1, 0) OVER (
+            PARTITION BY ct.Case_ID 
+            ORDER BY ct.Due_Date
+        ) AS Previous_Month_Status
+    FROM Clean_Transactions ct
+)
 
 ---
 
