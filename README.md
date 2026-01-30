@@ -22,7 +22,7 @@ In the high-volume environment of UK Tax Collection, resources are finite. HMRC 
 3.  **Slow Reaction Time:** Detecting "Spiraling Debt" (consecutive missed payments) often took months using legacy tools.
 ---
 
-## 📂 Operational Index
+## Operational Index
 1.  [Mission Directive & Outcomes](#-mission-directive--outcomes) *(Executive Summary)*
 2.  [Intelligence Objectives](#-intelligence-objectives) *(Key Business Questions)*
 3.  [Data Architecture & Schema](#-data-architecture--schema) *(Data Structure)*
