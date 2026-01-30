@@ -1,11 +1,3 @@
-# 🏛️ HMRC Debt Recovery Intelligence Hub: A Risk Enforcement Engine
-
-| Tech Stack | Methodology | Project Status |
-| :--- | :--- | :--- |
-| ![Power Bi](https://img.shields.io/badge/Power_BI-Pro-yellow?style=flat-square) ![SQL](https://img.shields.io/badge/SQL-Server-red?style=flat-square) ![DAX](https://img.shields.io/badge/DAX-Advanced-green?style=flat-square) | Star Schema, Agile | ✅ Completed (2025) |
-
-> **Disclaimer:** This is a personal portfolio project using a synthetic dataset to demonstrate technical capabilities. It is a simulation of real-world public sector challenges and is not affiliated with His Majesty's Revenue and Customs.
-
 # 🏛️ HMRC Debt Recovery: Intelligence & Enforcement Hub
 
 > **Professional Context:** This project demonstrates a Government-grade Risk Intelligence architecture designed during my tenure as a Data Analyst at **Ascentiq Solutions**.
@@ -30,17 +22,6 @@ In the high-volume environment of UK Tax Collection, resources are finite. HMRC 
 3.  **Slow Reaction Time:** Detecting "Spiraling Debt" (consecutive missed payments) often took months using legacy tools.
 ---
 
-## 📑 Table of Contents
-1.  [Executive Summary & Impact](#1-executive-summary--impact)
-2.  [Key Business Questions Solved](#2-key-business-questions-solved)
-3.  [Data Structure (Star Schema)](#3-data-structure-star-schema)
-4.  [Dashboard Deep Dive](#4-dashboard-deep-dive)
-5.  [UI/UX Design Philosophy](#-uiux-design-philosophy)
-6.  [Strategic Recommendations](#5-strategic-recommendations)
-7.  [Assumptions & Future Scope](#6-assumptions--future-scope)
-8.  [Technical Implementation](#7-technical-implementation)
-9.  [Data Dictionary](#8-data-dictionary)
-
 ## 📂 Operational Index
 1.  [Mission Directive & Outcomes](#-mission-directive--outcomes) *(Executive Summary)*
 2.  [Intelligence Objectives](#-intelligence-objectives) *(Key Business Questions)*
@@ -53,7 +34,7 @@ In the high-volume environment of UK Tax Collection, resources are finite. HMRC 
 9.  [Glossary of Terms](#-glossary-of-terms) *(Data Dictionary)*
 ---
 
-## 🏆 Executive Summary & Quantified Impact
+## 1.Mission Directive & Outcomes
 
 This solution functions as an automated risk segmentation engine, transforming raw ledger data into a strategic enforcement tool.
 
@@ -65,7 +46,7 @@ This solution functions as an automated risk segmentation engine, transforming r
 
 ---
 
-## 2. Key Business Questions Solved
+## 2.Intelligence Objectives
 
 | Stakeholder | Question | Solution |
 | :--- | :--- | :--- |
@@ -76,7 +57,7 @@ This solution functions as an automated risk segmentation engine, transforming r
 
 ---
 
-## 3. Data Structure (Star Schema)
+## 3.Data Architecture & Schema
 To ensure high performance and accurate filtering, the data model was architected as a robust **Star Schema**.
 
 ![Data Model Screenshot](dashboard_previews/3.Model_View.png)
@@ -92,7 +73,7 @@ To ensure high performance and accurate filtering, the data model was architecte
 
 ---
 
-## 4. Dashboard Deep Dive
+## 4.Operational Forensics
 
 The solution is architected around a specific operational workflow: **Detect (Page 1) $\rightarrow$ Investigate (Page 2).**
 
@@ -156,7 +137,7 @@ Located in the top-left corner. Because this is a drill-through page, the Back B
 ---
 
 
-## 🎨 5.UI/UX Design Philosophy
+##  5.Interface Ergonomics
 This project creates a "Mission Control" aesthetic suitable for government enforcement.
 
 *   **Color Semantics:**
@@ -167,7 +148,7 @@ This project creates a "Mission Control" aesthetic suitable for government enfor
 
 ---
 
-## 💡 6. Strategic Recommendations
+##  6.Policy Recommendations
 
 The data reveals that a broad-brush enforcement approach is inefficient. The following targeted interventions are recommended to lift the Recovery Rate from **65% to the 85% target**:
 
@@ -189,7 +170,7 @@ The data reveals that a broad-brush enforcement approach is inefficient. The fol
 
 ---
 
-## 🧠 7. Assumptions & Future Scope
+##  7.Constraints & Expansion Logic
 
 ### 📝 Key Assumptions
 *   **Strict Default Logic:** The model utilizes a "Binary Default" logic. If `Amount Paid < Amount Due`, the flag is set to `1`. There is no tolerance threshold for partial payments (e.g., paying 99% still triggers a default).
@@ -210,7 +191,7 @@ To further enhance the intelligence capabilities of this hub, the following upgr
 *   **Impact:** This would allow the agency to blacklist directors who serially bankrupt companies, stopping the fraud at the source.
 ---
 
-## 8. Technical Implementation
+## 8.Engineering Protocols
 
 ### SQL Transformation (The "Brain")
 Raw data was pre-processed using **SQL Server** to ensure logic resides in the backend.
@@ -220,7 +201,7 @@ Raw data was pre-processed using **SQL Server** to ensure logic resides in the b
 
 ---
 
-## 9.📖 Data Dictionary
+## 9.Glossary of Terms
 
 | Term | Definition | Logic Used |
 | :--- | :--- | :--- |
