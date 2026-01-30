@@ -143,9 +143,7 @@ SELECT
     Sector_Risk_Rank
     
 FROM Final_Risk_Engine
-
 WHERE Current_Outstanding > 0 -- Only show active debts
-
 ORDER BY 
 
     CASE Risk_Category 
