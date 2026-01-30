@@ -121,36 +121,21 @@ Final_Risk_Engine AS (
 
 
 SELECT 
-
     Risk_Category,
-    
     Company_Name,
-    
     Sector,
-    
     Region,
-    
     Debt_Type,
-    
     Total_Case_Value,
-    
     Current_Outstanding,
-    
     Recovery_Rate_Pct,
-    
     Total_Missed_Payments,
     Sector_Risk_Rank
 FROM Final_Risk_Engine
 WHERE Current_Outstanding > 0 -- Only show active debts
 ORDER BY 
     CASE Risk_Category 
-    
-        WHEN 'CRITICAL - LEGAL ACTION' THEN 1
-        
+    WHEN 'CRITICAL - LEGAL ACTION' THEN 1
         WHEN 'HIGH - HABITUAL DEFAULTER' THEN 2
-        
-        ELSE 3 
-        
-    END,
-    
-    Current_Outstanding DESC;
+        ELSE 3  
+        END,
