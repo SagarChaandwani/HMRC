@@ -121,6 +121,7 @@ Final_Risk_Engine AS (
 
 
 SELECT 
+
     Risk_Category,
     Company_Name,
     Sector,
