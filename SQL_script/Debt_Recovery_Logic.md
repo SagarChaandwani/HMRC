@@ -121,7 +121,6 @@ Final_Risk_Engine AS (
 
 
 SELECT 
-
     Risk_Category,
     Company_Name,
     Sector,
@@ -132,7 +131,6 @@ SELECT
     Recovery_Rate_Pct,
     Total_Missed_Payments,
     Sector_Risk_Rank
-    
 FROM Final_Risk_Engine
 WHERE Current_Outstanding > 0 -- Only show active debts
 ORDER BY 
