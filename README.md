@@ -1,4 +1,4 @@
-# 🏛️ HMRC Debt Recovery: Intelligence & Enforcement Hub
+#  HMRC Debt Recovery: Intelligence & Enforcement Hub
 
 > **Professional Context:** This project demonstrates a Government-grade Risk Intelligence architecture designed during my tenure as a Data Analyst at **Ascentiq Solutions**.
 >
@@ -10,12 +10,12 @@
 
 ---
 
-## 🧭 Mission Directive
+##  Mission Directive
 
-### 🎯 The Goal
+###  The Goal
 To engineer a **"Single Pane of Glass" Enforcement System** that moves Debt Management from **Passive Reporting** (static Excel sheets) to **Active Intelligence**. The objective is to maximize the **Recovery Rate** by identifying "Spiraling Debt" patterns early and directing enforcement officers to high-value, high-risk targets.
 
-### 📉 The Challenge
+###  The Challenge
 In the high-volume environment of UK Tax Collection, resources are finite. HMRC cannot investigate every missed payment manually. The department faced a "Blind Spot" crisis:
 1.  **Inefficient Triage:** Officers wasted hours analyzing low-value cases instead of focusing on habitual defaulters.
 2.  **Sector Blindness:** Inability to visualize which industries (e.g., Construction) were driving the bulk of the £1M debt pile.
