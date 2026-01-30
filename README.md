@@ -6,6 +6,16 @@
 
 > **Disclaimer:** This is a personal portfolio project using a synthetic dataset to demonstrate technical capabilities. It is a simulation of real-world public sector challenges and is not affiliated with His Majesty's Revenue and Customs.
 
+# 🏛️ HMRC Debt Recovery: Intelligence & Enforcement Hub
+
+> **Professional Context:** This project demonstrates a Government-grade Risk Intelligence architecture designed during my tenure as a Data Analyst at **Ascentiq Solutions**.
+>
+> *Note: While the data modeling, DAX logic, and enforcement frameworks mirror real-world implementations delivered for His Majesty's Revenue and Customs (HMRC), the underlying dataset used in this public repository is synthetic to comply with GDPR and Official Secrets Act regulations.*
+
+| **Governance** | **Architecture** | **Status** |
+| :--- | :--- | :--- |
+| ![Security](https://img.shields.io/badge/Security-Clearance_Level-blue?style=flat-square) | **Star Schema (SQL/DAX)** | ✅ **Deployed** |
+
 ---
 
 ## 🧭 Mission Directive
@@ -31,6 +41,16 @@ In the high-volume environment of UK Tax Collection, resources are finite. HMRC 
 8.  [Technical Implementation](#7-technical-implementation)
 9.  [Data Dictionary](#8-data-dictionary)
 
+## 📂 Operational Index
+1.  [Mission Directive & Outcomes](#-mission-directive--outcomes) *(Executive Summary)*
+2.  [Intelligence Objectives](#-intelligence-objectives) *(Key Business Questions)*
+3.  [Data Architecture & Schema](#-data-architecture--schema) *(Data Structure)*
+4.  [Operational Forensics](#-operational-forensics) *(Dashboard Deep Dive)*
+5.  [Interface Ergonomics](#-interface-ergonomics) *(UI/UX)*
+6.  [Policy Recommendations](#-policy-recommendations) *(Strategic Recs)*
+7.  [Constraints & Expansion Logic](#-constraints--expansion-logic) *(Assumptions)*
+8.  [Engineering Protocols](#-engineering-protocols) *(Technical Implementation)*
+9.  [Glossary of Terms](#-glossary-of-terms) *(Data Dictionary)*
 ---
 
 ## 🏆 Executive Summary & Quantified Impact
