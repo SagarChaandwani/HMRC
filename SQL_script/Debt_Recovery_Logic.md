@@ -1,5 +1,6 @@
 ========================================================================================
 PROJECT:    HMRC Debt Recovery Intelligence Hub
+
 AUTHOR:     [Sagar Chaandwani]
 OBJECTIVE:  ETL Script to transform raw instalment logs into a Strategic Risk Engine.
             
@@ -115,7 +116,7 @@ Final_Risk_Engine AS (
     JOIN Dim_Companies c ON agg.Company_ID = c.Company_ID
 )
 
--- FINAL OUTPUT TO POWER BI
+-- FINAL OUTPUT TO POWER BI,
 
 
 SELECT 
