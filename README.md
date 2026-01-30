@@ -172,12 +172,12 @@ The data reveals that a broad-brush enforcement approach is inefficient. The fol
 
 ##  7.Constraints & Expansion Logic
 
-### 📝 Key Assumptions
+###Key Assumptions
 *   **Strict Default Logic:** The model utilizes a "Binary Default" logic. If `Amount Paid < Amount Due`, the flag is set to `1`. There is no tolerance threshold for partial payments (e.g., paying 99% still triggers a default).
 *   **Currency Consistency:** All historical debt values are assumed to be in GBP (£) and are not adjusted for inflation or post-judgment interest penalties.
 *   **Fiscal Alignment:** The `Dim_Date` table is aligned to the standard **UK Tax Year** (April 6th – April 5th).
 
-### 🔮 Future Roadmap (Phase 2)
+### Future Roadmap (Phase 2)
 To further enhance the intelligence capabilities of this hub, the following upgrades are planned:
 
 #### **A. Predictive Modeling (Python Integration)**
