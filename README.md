@@ -62,9 +62,9 @@ To ensure high performance and accurate filtering, the data model was architecte
 
 ![Data Model Screenshot](dashboard_previews/3.Model_View.png)
 
-*   **Fact Table:** `Fact_Installments`
-    *   Granular transaction logs (Due Date, Amount Paid, Payment Method).
-    *   Contains the core `Is_Default_Flag` logic.
+*   **Fact Tables:**
+    *   `Fact_Installments`: Granular transaction logs (Due Date, Amount Paid, Payment Method). Contains the core `Is_Default_Flag` logic.
+    *   `Fact_Enforcement_Actions`: Tracks the operational history of legal interventions, recording specific actions taken (Action Type) and their results (Outcome).
 *   **Dimension Tables:**
     *   `Dim_Companies`: Sector, Region, Director Names.
     *   `Dim_Debt_Cases`: Case start dates and assigned officers.
