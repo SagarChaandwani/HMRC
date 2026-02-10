@@ -10,51 +10,19 @@
 
 ---
 
-##  Mission Directive
 
-###  The Goal
-To engineer a **"Single Pane of Glass" Enforcement System** that moves Debt Management from **Passive Reporting** (static Excel sheets) to **Active Intelligence**. The objective is to maximize the **Recovery Rate** by identifying "Spiraling Debt" patterns early and directing enforcement officers to high-value, high-risk targets.
+##  Executive Summary
 
-###  The Challenge
-In the high-volume environment of UK Tax Collection, resources are finite. HMRC cannot investigate every missed payment manually. The department faced a "Blind Spot" crisis:
-1.  **Inefficient Triage:** Officers wasted hours analyzing low-value cases instead of focusing on habitual defaulters.
-2.  **Sector Blindness:** Inability to visualize which industries (e.g., Construction) were driving the bulk of the £1M debt pile.
-3.  **Slow Reaction Time:** Detecting "Spiraling Debt" (consecutive missed payments) often took months using legacy tools.
----
+**The Problem:**
+HMRC’s Debt Management team was facing a **"Blind Spot" crisis**. With a **£1M+ active debt pile**, enforcement officers were overwhelmed. They were treating every missed payment equally, wasting hundreds of hours chasing low-value retail debts while high-value corporate defaulters "spiraled" into insolvency unnoticed.
 
-## Operational Index
-1.  [Mission Directive & Outcomes](#-mission-directive--outcomes) *(Executive Summary)*
-2.  [Intelligence Objectives](#-intelligence-objectives) *(Key Business Questions)*
-3.  [Data Architecture & Schema](#-data-architecture--schema) *(Data Structure)*
-4.  [Operational Forensics](#-operational-forensics) *(Dashboard Deep Dive)*
-5.  [Interface Ergonomics](#-interface-ergonomics) *(UI/UX)*
-6.  [Policy Recommendations](#-policy-recommendations) *(Strategic Recs)*
-7.  [Constraints & Expansion Logic](#-constraints--expansion-logic) *(Assumptions)*
-8.  [Engineering Protocols](#-engineering-protocols) *(Technical Implementation)*
-9.  [Glossary of Terms](#-glossary-of-terms) *(Data Dictionary)*
----
+**The Solution:**
+I engineered an **Automated Risk Intelligence Hub** that moved the department from "Passive Reporting" (Excel lists) to "Active Enforcement." The system automatically triages cases based on behavioral risk patterns.
 
-## 1.Mission Directive & Outcomes
-
-This solution functions as an automated risk segmentation engine, transforming raw ledger data into a strategic enforcement tool.
-
-**Quantified Impact:**
-*   **Portfolio Oversight:** Monitors a total active debt exposure of **£1M+**, providing real-time liquidity tracking across multiple regions.
-*   **Risk Identification:** Automatically flagged **23 "High Risk" Habitual Defaulters** using complex behavioral logic, creating an immediate "Hit List" for legal action.
-*   **Operational Efficiency:** Reduced case investigation time from **hours to seconds** via a forensic 3-click drill-through workflow.
-*   **Collection Performance:** Tracks a current **Recovery Rate of 65%**, highlighting a significant gap against the 85% departmental target and pinpointing underperforming sectors (specifically Construction).
-
----
-
-## 2.Intelligence Objectives
-
-| Stakeholder | Question | Solution |
-| :--- | :--- | :--- |
-| **Risk Director** | "Where is the debt accumulating?" | **Waterfall Chart** identifies Construction as the dominant risk sector. |
-| **Case Officer** | "Who requires immediate legal action?" | **Risk Matrix** flags companies with Red Diamond icons (2+ defaults). |
-| **Ops Manager** | "How efficient is our collection?" | **Recovery Rate KPI** (currently 65%) tracks collection vs. due amounts. |
-| **Forensic Analyst** | "When did the insolvency begin?" | **Drill-Through Case File** visualizes the exact month payments stopped. |
-
+**The Impact:**
+*    **Identified 23 "Habitual Defaulters"** immediately, creating a prioritized "Hit List" for legal action.
+*    **Exposed the "Construction Crisis":** Revealed that the Construction sector was the primary driver of the recovery gap.
+*    **Operational Velocity:** Reduced case investigation time from **hours to seconds** using a forensic drill-through workflow.
 ---
 
 ## 3.Data Architecture & Schema
